@@ -17,6 +17,8 @@ function update() {
         itemsJsonArray.push([title, desc]);
         localStorage.setItem('itemsJson', JSON.stringify(itemsJsonArray));
     }}
+    document.getElementById("title").value = "";
+    document.getElementById("desc").value = "";
     loadtable();
 }
 function loadtable(){

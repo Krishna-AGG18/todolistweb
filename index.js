@@ -1,7 +1,7 @@
 function update() {
     title = document.getElementById("title").value;
     desc = document.getElementById("desc").value;
-    if (title == "" && desc == ""){
+    if (title.trim() === "" && desc.trim() === ""){
         console.log("Empty fields")
     }
     else{

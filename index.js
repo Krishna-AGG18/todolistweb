@@ -1,6 +1,10 @@
 function update() {
     title = document.getElementById("title").value;
     desc = document.getElementById("desc").value;
+    if (title == "" && desc == ""){
+        console.log("Empty fields")
+    }
+    else{
     console.log("Updating ..... ");
     if (localStorage.getItem('itemsJson') == null) {
         itemsJsonArray = [];
@@ -12,7 +16,7 @@ function update() {
         let itemsJsonArray = JSON.parse(itemsJsonArraystr);
         itemsJsonArray.push([title, desc]);
         localStorage.setItem('itemsJson', JSON.stringify(itemsJsonArray));
-    }
+    }}
     loadtable();
 }
 function loadtable(){
